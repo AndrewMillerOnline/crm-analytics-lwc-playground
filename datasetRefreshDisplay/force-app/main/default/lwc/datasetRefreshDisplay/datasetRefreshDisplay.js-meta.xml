@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Dataset Refresh Display</masterLabel>
+    <targets>
+        <target>analytics__Dashboard</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="analytics__Dashboard">
+            <hasStep>false</hasStep>
+            <property name="idOrApiName" type="String" required="true" label="Dataset ID or API Name" description="ID or API Name of the dataset" />
+            <property name="displayName" type="String" required="true" label="Dataset Label" description="User-friendly label to show on dashboard" />
+            <property name="refreshCadence" type="String" label="Refresh Cadence" description="The number of hours between dataset refreshes" />
+            <property name="fontColor" type="String" label="Font Color" description="Provide a font color, in hex" default="#000000" />
+            <property name="fontSize" type="String" label="Font Size" description="Provide a font size, in px" default="12px" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
